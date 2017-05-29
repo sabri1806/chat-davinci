@@ -16,7 +16,7 @@ const server = require('http').createServer(app);//app.listen(process.env.PORT |
 console.log("puertooo->"+process.env.OPENSHIFT_NODEJS_PORT);
 console.log("ippppp->"+process.env.OPENSHIFT_NODEJS_IP);
 
-app.set('port', process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 3002);
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8080);
 app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
 app.use(express.static(__dirname + '/public'));
 
