@@ -1,33 +1,15 @@
 {
   "name": "chat-davinci",
   "version": "1.0.0",
-  "description": "End to end sample for running Node.js applications on Google Cloud Platform",
-  "repository": "https://github.com/GoogleCloudPlatform/nodejs-getting-started",
+  "description": "End to end sample for running Node.js applications on Cloud Platform",
+  "repository": "https://github.com/sabri1806/chat-davinci.git",
   "private": true,
   "scripts": {
     "start": "node app.js",
     "test": "ava -t 30s test/*.test.js | tap-dot",
     "cover": "nyc --cache npm test; nyc report --reporter=html"
   },
-  "author": "Google Inc.",
-  "contributors": [
-    {
-      "name": "Jon Wayne Parrott",
-      "email": "jonwayne@google.com"
-    },
-    {
-      "name": "Jonathan Simon",
-      "email": "jbsimon@google.com"
-    },
-    {
-      "name": "Jason Dobry",
-      "email": "jdobry@google.com"
-    },
-    {
-      "name": "Ace Nassri",
-      "email": "anassri@google.com"
-    }
-  ],
+  "author": "Sabrina Lucero",
   "license": "Apache-2.0",
   "semistandard": {
     "globals": [
@@ -46,11 +28,10 @@
   },
   "devDependencies": {
     "ava": "~0.19.1",
-    "nodejs-repo-tools": "git+https://git@github.com/GoogleCloudPlatform/nodejs-repo-tools.git",
     "supertest": "~3.0.0",
     "tap-dot": "~1.0.5"
   },
   "engines": {
-    "node": ">=4.3.2"
+    "node": "4.3.2"
   }
 }

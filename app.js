@@ -10,17 +10,24 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
-
-app.get('/', (req, res) => {
-
-  res.sendFile(__dirname +'/templates/index.html');
-
-});
-
 var io;
 
-const server = app.listen(process.env.PORT || 80, () => {
-  const port = server.address().port;
+const server = require('http').createServer(app);//app.listen(process.env.PORT || 8081, () => {
+
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 3000);
+app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
+app.use(express.static(__dirname + '/public'));
+
+
+app.get('/', function(req, res){
+  res.sendFile(__dirname +'/public/index.html');
+});
+
+server.listen(app.get('port'), app.get('ipaddr'), function(){
+  console.log('Express server listening on  IP: ' + app.get('ipaddr') + ' and port ' + app.get('port'));
+});
+
+ /* const port = server.address().port;
   console.log(`App listening on port ${port}`);
 });
 /*
