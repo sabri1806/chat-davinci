@@ -30,12 +30,9 @@
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 <script>
-    /*socket io permite enviar y recibir cualquier evento, 
-    Cuando el usuario escribe, el servidor recibe como un 
-    evento de chat message*/
-    var mySocketId;
 
-   $(function () {
+
+   /*$(function () {
     var socket = io();
     $('form').submit(function(){
 
@@ -57,8 +54,7 @@
       html += msg.message + '</br>';
       $('#messages').append($('<li>').html(html));     
 
-
     });
-  });
+  });*?
 </script>
 </html>
